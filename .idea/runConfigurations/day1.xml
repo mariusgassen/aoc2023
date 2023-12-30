@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="day1" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
+  <configuration default="false" name="day1" type="CargoCommandRunConfiguration" factoryName="Cargo Command" folderName="solutions">
     <option name="command" value="run --package aoc2023 --bin aoc2023 -- run --day 1" />
     <option name="workingDirectory" value="file://$PROJECT_DIR$" />
     <option name="emulateTerminal" value="true" />

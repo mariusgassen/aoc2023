@@ -1,4 +1,5 @@
 use std::cmp::max;
+
 use crate::aoc::Day;
 use crate::aoc::tools::read_lines;
 
@@ -107,14 +108,12 @@ impl Day2 {
             .fold(true,
                   |acc, m|
                       acc && m.possible(bag)
-                          && m.total() <= bag.total()
+                          && m.total() <= bag.total(),
             )
     }
-
 }
 
 impl Day for Day2 {
-
     fn part1(&self) -> String {
         let cubes = Cubes::new(12, 13, 14);
 
@@ -153,13 +152,14 @@ mod tests {
     fn day() -> super::Day2 {
         super::Day2::new(INPUT.to_string())
     }
+
     #[test]
     fn test_part1() {
-        assert_eq!(day().run().0, "8");
+        assert_eq!(day().part1(), "8");
     }
 
     #[test]
     fn test_part2() {
-        assert_eq!(day().run().1, "2286");
+        assert_eq!(day().part2(), "2286");
     }
 }

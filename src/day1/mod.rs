@@ -1,8 +1,8 @@
 use crate::aoc::{
+    Day,
     tools::{
         find_char, find_substrings, read_lines, rfind_char, rfind_substrings, string_to_digit,
     },
-    Day,
 };
 
 pub struct Day1 {
@@ -66,7 +66,7 @@ mod tests {
             treb7uchet"#;
 
         let day1 = super::Day1::new(input.to_string());
-        assert_eq!(day1.run().0, "142");
+        assert_eq!(day1.part1(), "142");
     }
 
     #[test]
@@ -80,7 +80,7 @@ mod tests {
             7pqrstsixteen"#;
 
         let day1 = super::Day1::new(input.to_string());
-        assert_eq!(day1.run().1, "281");
+        assert_eq!(day1.part2(), "281");
     }
 
     #[test]
@@ -88,7 +88,7 @@ mod tests {
         let input = "abc";
 
         let day1 = super::Day1::new(input.to_string());
-        assert_eq!(day1.run().0, "0");
+        assert_eq!(day1.part1(), "0");
     }
 
     #[test]
@@ -96,7 +96,7 @@ mod tests {
         let input = "abc";
 
         let day1 = super::Day1::new(input.to_string());
-        assert_eq!(day1.run().1, "0");
+        assert_eq!(day1.part2(), "0");
     }
 
     // Assuming each line contains exactly two digits or none

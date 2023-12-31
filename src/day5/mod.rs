@@ -420,11 +420,11 @@ mod tests {
 
     #[test]
     fn test_part1() {
-        assert_eq!(day().run().0, "35");
+        assert_eq!(day().part1(), "35");
     }
 
     #[test]
     fn test_part2() {
-        assert_eq!(day().run().1, "46");
+        assert_eq!(day().part2(), "46");
     }
 }

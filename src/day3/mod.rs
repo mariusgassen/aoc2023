@@ -1,9 +1,10 @@
-use crate::aoc::Day;
 use regex::Regex;
+
+use crate::aoc::Day;
 use crate::aoc::tools::read_lines;
 
 pub struct Day3 {
-    input: String
+    input: String,
 }
 
 impl Day3 {
@@ -41,9 +42,9 @@ impl Grid {
 
     fn get_adjacent_numbers(&self, x: usize, y: usize) -> Vec<i64> {
         let mut adjacent_numbers = Vec::new();
-        for j in y.saturating_sub(1)..y+2 {
+        for j in y.saturating_sub(1)..y + 2 {
             let mut is_num = false;
-            for i in x.saturating_sub(1)..x+2 {
+            for i in x.saturating_sub(1)..x + 2 {
                 if i == x && j == y {
                     is_num = false;
                     continue;
@@ -56,7 +57,7 @@ impl Grid {
                         adjacent_numbers.push(num);
                         is_num = true;
                     }
-                    continue
+                    continue;
                 }
                 is_num = false;
             }
@@ -104,14 +105,14 @@ impl Grid {
             end = next
         }
 
-        self.grid[y][start..end+1]
+        self.grid[y][start..end + 1]
             .iter().collect::<String>()
             .parse::<i64>().unwrap()
     }
 
     fn has_adjacent_symbol(&self, x: usize, y: usize) -> bool {
-        for i in x.saturating_sub(1)..x+2 {
-            for j in y.saturating_sub(1)..y+2 {
+        for i in x.saturating_sub(1)..x + 2 {
+            for j in y.saturating_sub(1)..y + 2 {
                 if i == x && j == y {
                     continue;
                 }
@@ -171,7 +172,7 @@ impl Day for Day3 {
         let grid = self.get_grid();
 
         let mut sum = 0;
-        for y in 0..grid.height(){
+        for y in 0..grid.height() {
             for x in 0..grid.width() {
                 sum += grid.gear_ratio(x, y).unwrap_or_else(|| 0)
             }
@@ -200,13 +201,14 @@ mod tests {
     fn day() -> super::Day3 {
         super::Day3::new(INPUT.to_string())
     }
+
     #[test]
     fn test_part1() {
-        assert_eq!(day().run().0, "4361");
+        assert_eq!(day().part1(), "4361");
     }
 
     #[test]
     fn test_part2() {
-        assert_eq!(day().run().1, "467835");
+        assert_eq!(day().part2(), "467835");
     }
 }

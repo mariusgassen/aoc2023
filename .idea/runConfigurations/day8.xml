@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="test day6" type="CargoCommandRunConfiguration" factoryName="Cargo Command" folderName="tests">
-    <option name="command" value="test --package aoc2023 --bin aoc2023 day6::tests" />
+  <configuration default="false" name="day8" type="CargoCommandRunConfiguration" factoryName="Cargo Command" folderName="solutions">
+    <option name="command" value="run --package aoc2023 --bin aoc2023 -- run --day 8" />
     <option name="workingDirectory" value="file://$PROJECT_DIR$" />
     <option name="emulateTerminal" value="true" />
     <option name="channel" value="DEFAULT" />

@@ -1,6 +1,6 @@
 use std::fs::File;
 
-use crate::{day1, day2, day3, day4, day5, day6};
+use crate::{day1, day2, day3, day4, day5, day6, day7, day8};
 
 pub(crate) mod tools;
 
@@ -26,7 +26,6 @@ pub fn get_day_input(day: u8) -> Result<(), Box<dyn std::error::Error>> {
         std::fs::create_dir("input")?;
     }
     if std::path::Path::new(&output_folder).exists() {
-        dbg!(format_args!("File {} already exists", output_folder));
         return Ok(());
     }
     let session_cookie = read_session_cookie()?;
@@ -54,8 +53,8 @@ pub fn run_solution(day: u8) -> Result<(String, String), Box<dyn std::error::Err
         4 => day4::Day4::new(input).run(),
         5 => day5::Day5::new(input).run(),
         6 => day6::Day6::new(input).run(),
-        // 7 => day7::Day7::new(input).run(),
-        // 8 => day8::Day8::new(input).run(),
+        7 => day7::Day7::new(input).run(),
+        8 => day8::Day8::new(input).run(),
         // 9 => day9::Day9::new(input).run(),
         // 10 => day10::Day10::new(input).run(),
         // 11 => day11::Day11::new(input).run(),

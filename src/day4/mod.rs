@@ -153,11 +153,11 @@ mod tests {
 
     #[test]
     fn test_part1() {
-        assert_eq!(day().run().0, "13");
+        assert_eq!(day().part1(), "13");
     }
 
     #[test]
     fn test_part2() {
-        assert_eq!(day().run().1, "30");
+        assert_eq!(day().part2(), "30");
     }
 }

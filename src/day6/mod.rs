@@ -88,11 +88,11 @@ mod tests {
 
     #[test]
     fn test_part1() {
-        assert_eq!(day().run().0, "288");
+        assert_eq!(day().part1(), "288");
     }
 
     #[test]
     fn test_part2() {
-        assert_eq!(day().run().1, "71503");
+        assert_eq!(day().part2(), "71503");
     }
 }

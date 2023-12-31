@@ -334,7 +334,22 @@ mod tests {
     }
 
     #[test]
+    fn test_day_1_full() {
+        let input = read_input(7).unwrap();
+        let d = Day7::new(input);
+        assert_eq!(d.part1(), "250120186");
+    }
+
+    #[test]
+    fn test_day_2_full() {
+        let input = read_input(7).unwrap();
+        let d = Day7::new(input);
+        assert_eq!(d.part2(), "250665248");
+    }
+
+    #[test]
     fn test_symbol_order() {
+        assert!(Symbol::Joker < Symbol::Two);
         assert!(Symbol::Two < Symbol::Three);
         assert!(Symbol::Three < Symbol::Four);
         assert!(Symbol::Four < Symbol::Five);
@@ -357,19 +372,5 @@ mod tests {
         assert!(Type::ThreeOfAKind < Type::FullHouse);
         assert!(Type::FullHouse < Type::FourOfAKind);
         assert!(Type::FourOfAKind < Type::FiveOfAKind);
-    }
-
-    #[test]
-    fn test_day_1_full() {
-        let input = read_input(7).unwrap();
-        let d = Day7::new(input);
-        assert_eq!(d.part1(), "250120186");
-    }
-
-    #[test]
-    fn test_day_2_full() {
-        let input = read_input(7).unwrap();
-        let d = Day7::new(input);
-        assert_eq!(d.part2(), "250665248");
     }
 }

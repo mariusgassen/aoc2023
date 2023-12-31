@@ -26,7 +26,7 @@ struct Grid {
 
 impl Grid {
     fn new(grid: Vec<Vec<char>>) -> Grid {
-        Grid { symbol_regex: Regex::new("[^\\d\\.]").unwrap(), grid }
+        Grid { symbol_regex: Regex::new("[^\\d.]").unwrap(), grid }
     }
 
     fn get(&self, x: usize, y: usize) -> Option<char> {

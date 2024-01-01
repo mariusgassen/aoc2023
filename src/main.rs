@@ -10,6 +10,8 @@ mod day6;
 mod day7;
 mod day8;
 mod day9;
+mod day10;
+mod day11;
 
 /// A cli interface to run the solutions for the AoC 2023.
 /// The input files are downloaded automatically if they do not exist.
